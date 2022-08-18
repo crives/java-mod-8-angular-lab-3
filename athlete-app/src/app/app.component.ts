@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'athlete-app';
+  name = "";
+  sport = "";
+  active: boolean = false;
 
   athletes = [
     {
@@ -25,4 +28,13 @@ export class AppComponent {
       active: true
     }
   ]
+
+  onAddToList() {
+    let newAthlete = {
+      name: this.name,
+      sport: this.sport,
+      active: this.active
+    }
+    this.athletes.push(newAthlete);
+  }
 }

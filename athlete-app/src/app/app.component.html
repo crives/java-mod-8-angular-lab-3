@@ -1,4 +1,12 @@
 <div>
+  <p>Athlete name: <input type="text" [(ngModel)]="name" /></p>
+  <p>Athlete sport: <input type="text" [(ngModel)]="sport" /></p>
+  <p>Athlete active: <input type="text" [(ngModel)]="active" /></p>
+  <div>
+    <button (click)="onAddToList()">Add Athlete</button>
+  </div>
+
+  <h2>Athletes</h2>
   <ul>
     <li *ngFor="let athlete of athletes">
       {{athlete.name}} {{athlete.sport}} <span *ngIf="athlete.active">is active</span> <span *ngIf="!athlete.active">is not active</span>
