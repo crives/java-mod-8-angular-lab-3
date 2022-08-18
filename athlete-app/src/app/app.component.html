@@ -1,0 +1,7 @@
+<div>
+  <ul>
+    <li *ngFor="let athlete of athletes">
+      {{athlete.name}} {{athlete.sport}} <span *ngIf="athlete.active">is active</span> <span *ngIf="!athlete.active">is not active</span>
+    </li>
+  </ul>
+</div>
